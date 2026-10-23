@@ -7,6 +7,8 @@ BASE_DIR = SELF_DIR.parent.parent
 
 INSTALLED_APPS = [
     "testapp",
+    # This will install all the lookups on post_migrate.
+    "django_lookups",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

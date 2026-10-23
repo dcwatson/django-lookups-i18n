@@ -3,7 +3,7 @@ from typing import Self
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from django_lookups import CharLookup, IntLookup, Lookup
+from django_lookups.models import CharLookup, IntLookup, Lookup
 
 
 class Study(IntLookup):

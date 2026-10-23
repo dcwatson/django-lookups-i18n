@@ -4,7 +4,7 @@ A project born of the desire to stop defining separate enums for every lookup mo
 
 ```python
 from typing import Self
-from django_lookups import CharLookup, IntLookup, Lookup
+from django_lookups.models import CharLookup, IntLookup, Lookup
 
 
 class Study(IntLookup):
@@ -34,6 +34,11 @@ class Status(CharLookup):
 ```
 
 Notice the lookups are typed as `Self` -- `Lookup` is a descriptor that will return actual model singletons when accessed. So `Study.ONE` is an actual `Study` instance (and will be the same instance every time).
+
+
+## Installing lookups
+
+If you want all defined lookups to be installed on migration, add `django_lookups` to your `INSTALLED_APPS`. Otherwise, you can call `django_lookups.install()` to manually create all registered lookups.
 
 
 ## Translations

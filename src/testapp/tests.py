@@ -1,15 +1,10 @@
 from django.test import TestCase
 from django.utils import translation
 
-from django_lookups import lookups
-
 from .models import Order, Other, Status, Study
 
 
 class BasicTests(TestCase):
-    def setUp(self):
-        lookups.install()
-
     def test_int_lookup(self):
         # Test that IntLookups can be compared directly to ints.
         self.assertEqual(Study.ONE, 1)
