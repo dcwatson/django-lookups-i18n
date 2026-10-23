@@ -1,0 +1,38 @@
+name: Publish
+
+on: [workflow_dispatch]
+
+env:
+    UV_PYTHON_DOWNLOADS: never
+    UV_PYTHON_PREFERENCE: only-system
+
+jobs:
+    publish:
+        name: Publish to PyPI
+        runs-on: ubuntu-latest
+        environment:
+            name: pypi
+            url: https://pypi.org/p/django-lookups-i18n
+        permissions:
+            id-token: write
+            contents: write
+        steps:
+            - uses: actions/checkout@v7
+            - name: Set up Python
+              uses: actions/setup-python@v7
+            - name: Set up uv
+              uses: astral-sh/setup-uv@v10.2.0
+            - name: Build
+              run: uv build
+            - name: Publish
+              run: uv publish
+            - name: GitHub Release
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  VERSION=$(uv version --short)
+                  if [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+                      gh release create "v${VERSION}" dist/* \
+                          --target "$GITHUB_SHA" \
+                          --title "v${VERSION}"
+                  fi
