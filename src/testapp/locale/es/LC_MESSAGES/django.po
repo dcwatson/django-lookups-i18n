@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-23 16:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: src/testapp/models.py:12
+msgid "Study One"
+msgstr "Estudio Uno"
+
+#: src/testapp/models.py:13
+msgid "Study Two"
+msgstr "Estudio Dos"
+
+#: src/testapp/models.py:14
+msgid "Study Three"
+msgstr "Estudio Tres"
+
+#: src/testapp/models.py:15
+msgid "Study Four"
+msgstr "Estudio Quatro"
+
+#: src/testapp/models.py:16
+msgid "Study Five"
+msgstr "Estudio Cinco"
+
+#: src/testapp/models.py:24 src/testapp/models.py:30
+msgid "New"
+msgstr "Nuevo"
+
+#: src/testapp/models.py:25
+msgid "In Progress"
+msgstr "En Processo"
+
+#: src/testapp/models.py:26
+msgid "Completed"
+msgstr "Completada"
+
+#: src/testapp/settings.py:117
+msgid "English"
+msgstr "Inglés"
+
+#: src/testapp/settings.py:118
+msgid "Spanish"
+msgstr "Español"
